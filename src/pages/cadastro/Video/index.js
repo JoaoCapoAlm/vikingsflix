@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 
-function CadastroVideo() {
+function newVideo() {
   return (
     <PageDefault>
       <h1>Cadastro de Video</h1>
@@ -11,7 +11,7 @@ function CadastroVideo() {
         Cadastrar Categoria
       </Link>
     </PageDefault>
-  )
+  );
 }
 
-export default CadastroVideo;
+export default newVideo;

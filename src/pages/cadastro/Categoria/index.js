@@ -4,27 +4,26 @@ import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
 
-function CadastroCategoria() {
-  const valoresIniciais = {
+function newCategory() {
+  const valueBeggin = {
     nome: '',
     descricao: '',
     cor: '',
   };
   const [categorias, setCategorias] = useState([]);
-  const [values, setValues] = useState(valoresIniciais);
+  const [values, setValues] = useState(valueBeggin);
 
-  function setValue(chave, valor) {
-    // chave: nome, descricao, bla, bli
+  function setValue(key, value) {
     setValues({
       ...values,
-      [chave]: valor, // nome: 'valor'
+      [key]: value,
     });
   }
 
-  function handleChange(infosDoEvento) {
+  function handleChange(eventInfo) {
     setValue(
-      infosDoEvento.target.getAttribute('name'),
-      infosDoEvento.target.value,
+      eventInfo.target.getAttribute('name'),
+      eventInfo.target.value,
     );
   }
 
@@ -32,8 +31,8 @@ function CadastroCategoria() {
     const getCategory = 'http://localhost:8080/categorias';
 
     fetch(getCategory)
-      .then(async (respostaDoServidor) => {
-        const resposta = await respostaDoServidor.json();
+      .then(async (serverResponse) => {
+        const resposta = await serverResponse.json();
         setCategorias([
           ...resposta,
         ]);
@@ -47,14 +46,14 @@ function CadastroCategoria() {
         {values.nome}
       </h1>
 
-      <form onSubmit={function handleSubmit(infosDoEvento) {
-        infosDoEvento.preventDefault();
+      <form onSubmit={function handleSubmit(eventInfo) {
+        eventInfo.preventDefault();
         setCategorias([
           ...categorias,
           values,
         ]);
 
-        setValues(valoresIniciais);
+        setValues(valueBeggin);
       }}
       >
 
@@ -107,4 +106,4 @@ function CadastroCategoria() {
   );
 }
 
-export default CadastroCategoria;
+export default newCategory;
