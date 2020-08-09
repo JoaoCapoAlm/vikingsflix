@@ -29,10 +29,9 @@ function CadastroCategoria() {
   }
 
   useEffect(() => {
-    console.log('alo alo w brasil');
-    const URL_TOP = 'http://localhost:8080/categorias';
-    // E a ju ama variáveis
-    fetch(URL_TOP)
+    const getCategory = 'http://localhost:8080/categorias';
+
+    fetch(getCategory)
       .then(async (respostaDoServidor) => {
         const resposta = await respostaDoServidor.json();
         setCategorias([
@@ -89,7 +88,6 @@ function CadastroCategoria() {
 
       {categorias.length === 0 && (
         <div>
-          {/* Cargando... */}
           Loading...
         </div>
       )}
