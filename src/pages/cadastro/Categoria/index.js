@@ -31,7 +31,7 @@ function CadastroCategoria() {
   useEffect(() => {
     const getCategory = window.location.hostname.includes('localhost')
       ? 'http://localhost:8080/categorias'
-      : 'https://vikingsflix.herokuapp.com/';
+      : 'https://vikingsflix.herokuapp.com/categorias';
 
     fetch(getCategory)
       .then(async (respostaDoServidor) => {
