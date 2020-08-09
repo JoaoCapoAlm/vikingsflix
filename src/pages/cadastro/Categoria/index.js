@@ -29,7 +29,9 @@ function CadastroCategoria() {
   }
 
   useEffect(() => {
-    const getCategory = 'http://localhost:8080/categorias';
+    const getCategory = window.location.hostname.includes('localhost')
+      ? 'http://localhost:8080/categorias'
+      : 'https://vikingsflix.herokuapp.com/';
 
     fetch(getCategory)
       .then(async (respostaDoServidor) => {
@@ -94,8 +96,8 @@ function CadastroCategoria() {
 
       <ul>
         {categorias.map((categoria) => (
-          <li key={`${categoria.nome}`}>
-            {categoria.nome}
+          <li key={`${categoria.id}`} className="listCadCategory">
+            {categoria.titulo}
           </li>
         ))}
       </ul>
