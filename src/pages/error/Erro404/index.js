@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './Erro404.css';
 import Button from '../../../components/Button';
 import PageDefault from '../../../components/PageDefault';
 
