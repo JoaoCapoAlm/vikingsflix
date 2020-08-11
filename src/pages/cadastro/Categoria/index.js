@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import config from '../../../config';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
@@ -7,17 +6,11 @@ import Button from '../../../components/Button';
 import useForm from '../../../hooks/useForm';
 
 function CadastroCategoria() {
-  const valoresIniciais = {
-    titulo: '',
-    descricao: '',
-    cor: '',
-  };
-
-  const { handleChange, values, clearForm } = useForm(valoresIniciais);
+  const { handleChange, values, clearForm } = useForm({});
   const [categorias, setCategorias] = useState([]);
 
   useEffect(() => {
-    fetch(config.urlBackEnd)
+    fetch(`${config.urlBackEnd}/categorias`)
       .then(async (respostaDoServidor) => {
         const resposta = await respostaDoServidor.json();
         setCategorias([
@@ -80,16 +73,12 @@ function CadastroCategoria() {
       )}
 
       <ul>
-        {categorias.map((categoria) => (
-          <li key={`${categoria.id}`} className="listCadCategory">
-            {categoria.titulo}
+        {categorias.map((category) => (
+          <li key={category.id} className="listCadCategory">
+            {category.titulo}
           </li>
         ))}
       </ul>
-
-      <Link to="/">
-        Ir para home
-      </Link>
     </PageDefault>
   );
 }
