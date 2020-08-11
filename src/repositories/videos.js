@@ -1,9 +1,9 @@
 import config from '../config';
 
-const urlvideos = `${config.urlBackEnd}/videos`;
+const urlVideos = `${config.urlBackEnd}/videos`;
 
 function create(objetoVideo) {
-  return fetch(`${urlvideos}?_embed=videos`, {
+  return fetch(`${urlVideos}?_embed=videos`, {
     method: 'POST',
     headers: {
       'Content-type': 'application/json',
@@ -16,7 +16,7 @@ function create(objetoVideo) {
         return resposta;
       }
 
-      throw new Error('Não foi possível pegar os dados');
+      throw new Error('Não foi possível cadastrar os dados');
     });
 }
 

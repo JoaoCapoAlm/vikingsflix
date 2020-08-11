@@ -1,32 +1,44 @@
-import React from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
 import useForm from '../../../hooks/useForm';
 import videosRepository from '../../../repositories/videos';
+import categoriasRepository from '../../../repositories/categorias';
 
 function CadastroVideo() {
-  const history = useHistory();
-  const { handleChange, values } = useForm({
-    titulo: 'Vídeo padrão',
-    url: 'https://www.youtube.com/watch?v=c8mVlakBESE',
-    categoria: 'Front End',
-  });
+  const { handleChange, values } = useForm({ });
+  const [categories, setCategories] = useState([]);
+  const categoryTitles = categories.map(({ titulo }) => titulo);
+
+  useEffect(() => {
+    categoriasRepository
+      .getAll()
+      .then((categoryFromServer) => {
+        setCategories(categoryFromServer);
+      });
+  }, []);
 
   return (
     <PageDefault>
       <h1>Cadastro de Video</h1>
+
       <form onSubmit={(event) => {
         event.preventDefault();
+
+        // eslint-disable-next-line arrow-body-style
+        const categoriaEscolhida = categories.find((category) => {
+          return category.titulo === values.categoria;
+        });
 
         videosRepository.create({
           titulo: values.titulo,
           url: values.url,
-          categoriaId: 1,
+          categoriaId: categoriaEscolhida.id,
         }).then(() => {
-          console.log('Cadastrado com sucesso!');
-          history.push('/');
+          // eslint-disable-next-line no-alert
+          alert('Cadastrado com sucesso');
         });
       }}
       >
@@ -49,6 +61,7 @@ function CadastroVideo() {
           name="categoria"
           value={values.categoria}
           onChange={handleChange}
+          suggestions={categoryTitles}
         />
 
         <Button type="submit">
