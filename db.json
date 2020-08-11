@@ -2,13 +2,13 @@
   "categorias": [
     {
       "id": 1,
-      "titulo": "Filmes",
-      "cor": "orange"
+      "titulo": "Série",
+      "cor": "#6BD1FF"
     },
     {
       "id": 2,
-      "titulo": "Série",
-      "cor": "#6BD1FF"
+      "titulo": "Filmes",
+      "cor": "orange"
     },
     {
       "id": 3,
@@ -30,65 +30,63 @@
     {
       "id": 1,
       "categoriaId": 1,
-      "titulo": "Skyrim",
-      "url": "https://youtu.be/K6YIB_bHb_g"
+      "titulo": "Vikings | 2ª temporada",
+      "url": "https://youtu.be/fXOej9DUHJ4",
+      "description": "Vikings segue a vida de Ragnar Lothbrok (Travis Fimmel), o maior guerreiro da sua era. Lider de seu bando, com seus irmãos e sua família, ele ascende ao poder e torna-se Rei da tribo dos vikings. Além de guerreiro implacável, Ragnar segue as tradições nórdicas e é devoto dos deuses. As lendas contam que ele descende diretamente de Odin, o deus da guerra."
     },
     {
       "id": 2,
       "categoriaId": 1,
-      "titulo": "Thor",
-      "description": "",
-      "url": "https://youtu.be/JOddp-nlNvQ"
-    },
-    {
-      "id": 3,
-      "categoriaId": 1,
-      "titulo": "Como Treinar seu Dragão",
-      "url": "https://youtu.be/jwuGN9v_MRQ"
-    },
-    {
-      "id": 4,
-      "categoriaId": 1,
-      "titulo": "VIKING (2016)",
-      "url": "https://youtu.be/5FWtcorm7hA"
-    },
-    {
-      "id": 5,
-      "categoriaId": 1,
-      "titulo": "Ragnarok (2013)",
-      "description": "",
-      "url": "https://youtu.be/U2sBa6-hEHo"
-    },
-    {
-      "id": 6,
-      "categoriaId": 1,
-      "titulo": "O Guerreiro Silencioso",
-      "description": "",
-      "url": "https://youtu.be/F9mZw8yLRoc"
-    },
-    {
-      "id": 7,
-      "categoriaId": 2,
-      "titulo": "Vikings",
-      "url": "https://youtu.be/LG-ge2K7jxY"
-    },
-    {
-      "id": 8,
-      "categoriaId": 2,
       "titulo": "Norsemen (3ª temporada)",
       "url": "https://youtu.be/PtHswQWbcCA"
     },
     {
-      "id": 9,
-      "categoriaId": 2,
+      "id": 3,
+      "categoriaId": 1,
       "titulo": "The Last kingdom (1ª temporada)",
       "url": "https://youtu.be/0ZXdPhfMbAw"
     },
     {
-      "id": 10,
-      "categoriaId": 2,
+      "id": 4,
+      "categoriaId": 1,
       "titulo": "Ragnarok | Trailer oficial | Neftlfix",
       "url": "https://youtu.be/i2qDt5D8RSs"
+    },
+    {
+      "id": 5,
+      "categoriaId": 2,
+      "titulo": "Skyrim",
+      "url": "https://youtu.be/K6YIB_bHb_g"
+    },
+    {
+      "id": 6,
+      "categoriaId": 2,
+      "titulo": "Thor",
+      "url": "https://youtu.be/JOddp-nlNvQ"
+    },
+    {
+      "id": 7,
+      "categoriaId": 2,
+      "titulo": "Como Treinar seu Dragão",
+      "url": "https://youtu.be/jwuGN9v_MRQ"
+    },
+    {
+      "id": 8,
+      "categoriaId": 2,
+      "titulo": "VIKING (2016)",
+      "url": "https://youtu.be/5FWtcorm7hA"
+    },
+    {
+      "id": 9,
+      "categoriaId": 2,
+      "titulo": "Ragnarok (2013)",
+      "url": "https://youtu.be/U2sBa6-hEHo"
+    },
+    {
+      "id": 10,
+      "categoriaId": 2,
+      "titulo": "O Guerreiro Silencioso",
+      "url": "https://youtu.be/F9mZw8yLRoc"
     },
     {
       "id": 11,
