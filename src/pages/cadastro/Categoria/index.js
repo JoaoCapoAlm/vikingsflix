@@ -35,6 +35,12 @@ function CadastroCategoria() {
           values,
         ]);
 
+        categoryRepository.create({
+          titulo: values.titulo,
+          descricao: values.descricao,
+          cor: values.cor,
+        });
+
         clearForm();
       }}
       >
