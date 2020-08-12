@@ -4,6 +4,7 @@ import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
 import useForm from '../../../hooks/useForm';
+import categoryRepository from '../../../repositories/categorias';
 
 function CadastroCategoria() {
   const { handleChange, values, clearForm } = useForm({});
@@ -27,8 +28,8 @@ function CadastroCategoria() {
         {values.titulo}
       </h1>
 
-      <form onSubmit={function handleSubmit(infosDoEvento) {
-        infosDoEvento.preventDefault();
+      <form onSubmit={function handleSubmit(event) {
+        event.preventDefault();
         setCategorias([
           ...categorias,
           values,
@@ -40,7 +41,7 @@ function CadastroCategoria() {
 
         <FormField
           label="Nome da Categoria"
-          name="nome"
+          name="titulo"
           value={values.titulo}
           onChange={handleChange}
         />
@@ -61,15 +62,15 @@ function CadastroCategoria() {
           onChange={handleChange}
         />
 
-        <Button>
+        <Button type="submit">
           Cadastrar
         </Button>
       </form>
 
       {categorias.length === 0 && (
-        <div>
+        <span className="spanLoading">
           Loading...
-        </div>
+        </span>
       )}
 
       <ul>

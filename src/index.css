@@ -8,7 +8,7 @@
   --black: #000000;
   --blackLighter: #9E9E9E;
   --grayLight: #F5F5F5;
-  --grayMedium: #e5e5e5; 
+  --grayMedium: #E5E5E5; 
   --white: #FFFFFF;
   --frontEnd: #6BD1FF;
   --backEnd: #00C86F;
@@ -32,4 +32,12 @@ a {
 
 .listCadCategory {
   text-align: left;
+}
+
+.spanLoading {
+  font-weight: bold;
+  font-size: 20px;
+  font-style: normal;
+  text-align: center;
+  color: #DBD82E;
 }
