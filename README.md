@@ -2,11 +2,11 @@
 
 Esse projeto foi realizado durante a Imersão React da Alura
 
-### Projeto:
+## Projeto:
 https://vikingsflix.vercel.app/
 
 
-As APIs com as categorias e vídeos são
+## APIs com as categorias e vídeos:
 
 ### Categorias:
 https://vikingsflix.herokuapp.com/categorias
