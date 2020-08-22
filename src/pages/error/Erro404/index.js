@@ -6,15 +6,18 @@ import PageDefault from '../../../components/PageDefault';
 function Error404() {
   return (
     <PageDefault>
-      <h1>Erro 404</h1>
-      <h2>Página não encontrada</h2>
+      <div className="error">
 
-      <Button
-        as={Link}
-        to="/"
-      >
-        Tela Inicial
-      </Button>
+        <h1>Erro 404</h1>
+        <h2>Página não encontrada</h2>
+
+        <Button
+          as={Link}
+          to="/"
+        >
+          Tela Inicial
+        </Button>
+      </div>
     </PageDefault>
   );
 }

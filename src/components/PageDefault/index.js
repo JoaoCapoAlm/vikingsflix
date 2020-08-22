@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import Menu from '../Menu';
 import Footer from '../Footer';
@@ -27,14 +26,5 @@ function PageDefault({ children, paddingAll }) {
     </>
   );
 }
-
-PageDefault.defaultProps = {
-  paddingAll: null,
-};
-
-PageDefault.propTypes = {
-  children: PropTypes.element.isRequired,
-  paddingAll: PropTypes.number,
-};
 
 export default PageDefault;
