@@ -11,9 +11,9 @@ function Home() {
       .then((categoriasComVideo) => {
         setDadosInicias(categoriasComVideo);
       })
-      .catch((err) => {
-        // eslint-disable-next-line no-console
-        console.log(err.message);
+      .catch((e) => {
+        // eslint-disable-next-line no-alert
+        alert(e.message);
       });
   }, []);
 

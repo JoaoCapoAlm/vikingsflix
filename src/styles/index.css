@@ -41,3 +41,8 @@ a {
   text-align: center;
   color: #DBD82E;
 }
+
+.error {
+  text-align: center;
+  text-transform: uppercase;
+}
