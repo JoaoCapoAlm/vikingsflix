@@ -4,6 +4,7 @@
 }
 
 :root {
+  --color-logo: #DBD82E;
   --primary: #2A7AE4;
   --black: #000000;
   --blackLighter: #9E9E9E;
@@ -28,6 +29,12 @@ a {
   min-height: calc(100vh - var(--bodyPaddingTop));
   display: flex;
   flex-direction: column;
+}
+
+.ajustePosicaoBtn{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 .listCadCategory {

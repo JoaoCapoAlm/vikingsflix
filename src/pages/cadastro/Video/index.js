@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
@@ -63,15 +62,12 @@ function CadastroVideo() {
           onChange={handleChange}
           suggestions={categoryTitles}
         />
-
-        <Button type="submit">
-          Cadastrar
-        </Button>
+        <div className="ajustePosicaoBtn">
+          <Button type="submit">
+            Cadastrar
+          </Button>
+        </div>
       </form>
-
-      <Button as={Link} to="/cadastro/categoria">
-        Cadastrar Categoria
-      </Button>
     </PageDefault>
   );
 }

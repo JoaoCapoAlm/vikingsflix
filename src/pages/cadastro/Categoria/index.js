@@ -67,10 +67,11 @@ function CadastroCategoria() {
           value={values.cor}
           onChange={handleChange}
         />
-
-        <Button type="submit">
-          Cadastrar
-        </Button>
+        <div className="ajustePosicaoBtn">
+          <Button type="submit">
+            Cadastrar
+          </Button>
+        </div>
       </form>
 
       {categorias.length === 0 && (
@@ -78,7 +79,7 @@ function CadastroCategoria() {
           Loading...
         </span>
       )}
-
+      <h4>Categorias já cadastradas</h4>
       <ul>
         {categorias.map((category) => (
           <li key={category.id} className="listCadCategory">
