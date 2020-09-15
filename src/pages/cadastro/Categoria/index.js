@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import config from '../../../config';
+import urlBackEnd from '../../../config';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
@@ -11,7 +11,7 @@ function CadastroCategoria() {
   const [categorias, setCategorias] = useState([]);
 
   useEffect(() => {
-    fetch(`${config.urlBackEnd}/categorias`)
+    fetch(`${urlBackEnd}/categorias`)
       .then(async (respostaDoServidor) => {
         const resposta = await respostaDoServidor.json();
         setCategorias([

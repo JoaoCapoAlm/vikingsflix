@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const FooterBase = styled.footer`
+const FooterStyle = styled.footer`
   background: var(--black);
   border-top: 2px solid var(--primary);
   padding-left: 16px;
@@ -17,7 +17,7 @@ const FooterBase = styled.footer`
 
 function Footer() {
   return (
-    <FooterBase>
+    <FooterStyle>
       <a href="https://www.alura.com.br/">
         <img src="https://www.alura.com.br/assets/img/alura-logo-white.1570550707.svg" alt="Logo Alura" />
       </a>
@@ -34,7 +34,7 @@ function Footer() {
           Imersão React da Alura
         </a>
       </p>
-    </FooterBase>
+    </FooterStyle>
   );
 }
 

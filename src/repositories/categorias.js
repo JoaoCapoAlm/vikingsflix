@@ -1,6 +1,6 @@
-import config from '../config';
+import urlBackEnd from '../config';
 
-const urlCategories = `${config.urlBackEnd}/categorias?_embed=videos`;
+const urlCategories = `${urlBackEnd}/categorias?_embed=videos`;
 
 function getAll() {
   return fetch(`${urlCategories}`)

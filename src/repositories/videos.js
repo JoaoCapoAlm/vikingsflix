@@ -1,6 +1,6 @@
-import config from '../config';
+import urlBackEnd from '../config';
 
-const urlVideos = `${config.urlBackEnd}/videos`;
+const urlVideos = `${urlBackEnd}/videos`;
 
 function create(object) {
   return fetch(`${urlVideos}?_embed=videos`, {
