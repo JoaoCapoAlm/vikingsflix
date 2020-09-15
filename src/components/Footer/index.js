@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const FooterStyle = styled.footer`
   background: var(--black);
-  border-top: 2px solid var(--primary);
+  border-top: 2px solid var(--color-logo);
   padding-left: 16px;
   padding-right: 16px;
   padding-top: 32px;

@@ -52,7 +52,7 @@ const Input = styled.input`
   transition: border-color .3s;
   
   &:focus {
-    border-bottom-color: var(--primary);
+    border-bottom-color: var(--color-logo);
   }
   &:focus:not([type="color"]) + span {
     transform: scale(.6) translateY(-10px);
@@ -121,8 +121,8 @@ FormField.defaultProps = {
 
 FormField.propTypes = {
   label: PropTypes.string.isRequired,
-  type: PropTypes.string,
   name: PropTypes.string.isRequired,
+  type: PropTypes.string,
   value: PropTypes.string,
   onChange: PropTypes.func,
   suggestions: PropTypes.arrayOf(PropTypes.string),

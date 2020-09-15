@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { MenuStyle } from './styled';
 import '../../styles/Menu.css';
 import Button from '../Button';
-import Logo from '../LogoVikingsflix';
+import Logo from '../LogoVikings';
 
 function Menu() {
   return (
@@ -11,10 +11,6 @@ function Menu() {
       <Link to="/">
         <Logo />
       </Link>
-
-      <Button as={Link} className="ButtonLink" to="/cadastro/categoria">
-        Nova categoria
-      </Button>
 
       <Button as={Link} to="/cadastro/video">
         Novo vídeo

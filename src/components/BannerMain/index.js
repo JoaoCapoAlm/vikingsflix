@@ -46,13 +46,13 @@ function BannerMain({
 }
 
 BannerMain.defaultProps = {
-  videoDescription: '',
+  videoDescription: null,
 };
 
 BannerMain.propTypes = {
   videoTitle: PropTypes.string.isRequired,
-  videoDescription: PropTypes.string,
   url: PropTypes.string.isRequired,
+  videoDescription: PropTypes.string,
 };
 
 export default BannerMain;
