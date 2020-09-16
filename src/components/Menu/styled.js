@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const MenuStyle = styled.nav`
+const MenuStyle = styled.nav`
   width: 100%;
   height: 94px;
   z-index: 100;
@@ -25,18 +25,4 @@ export const MenuStyle = styled.nav`
   }
 `;
 
-export const ButtonLink = styled.button`
-  color: var(--color-logo);
-  border: 1px solid var(--color-logo);
-  box-sizing: border-box;
-  cursor: pointer;
-  padding: 16px 24px;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 16px;
-  outline: none;
-  border-radius: 5px;
-  text-decoration: none;
-  display: inline-block;
-  transition: opacity .3s;
-`;
+export default MenuStyle;
