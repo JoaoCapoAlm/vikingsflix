@@ -20,6 +20,4 @@ function create(object) {
     });
 }
 
-export default {
-  create,
-};
+export default create;

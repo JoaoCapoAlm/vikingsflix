@@ -1,8 +1,7 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import PropTypes from 'prop-types';
 
 const Button = styled.button`
-  color: var(--white);
-  border: 1px solid var(--white);
   background: var(--black);
   box-sizing: border-box;
   cursor: pointer;
@@ -19,6 +18,19 @@ const Button = styled.button`
   &:focus {
     opacity: .5;
   }
+
+  ${({ cor }) => css`
+    color: var(${cor});
+    border: 1px solid var(${cor});
+  `};
 `;
+
+Button.propsTypes = {
+  cor: PropTypes.string,
+};
+
+Button.defaultProps = {
+  cor: '--white',
+};
 
 export default Button;
