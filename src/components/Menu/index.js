@@ -27,6 +27,7 @@ const MenuStyle = styled.nav`
   @media (max-width: 800px){
     height: 40px;
     justify-content: center;
+    padding-right: 0;
   }
 `;
 

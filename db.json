@@ -24,6 +24,17 @@
       "id": 5,
       "titulo": "Música",
       "cor": "#6b5be2"
+    },
+    {
+      "titulo": "Nova categoria",
+      "descricao": "Nova categoria",
+      "id": 6
+    },
+    {
+      "titulo": "Testando Categoria",
+      "descricao": "Essa é a descrição que está sendo adicionada em uma categoria nova",
+      "cor": "#0da80b",
+      "id": 7
     }
   ],
   "videos": [

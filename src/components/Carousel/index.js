@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { VideoCardGroupContainer, Title } from './styles';
+import { VideoCardGroupContainer, Title, Descritpion } from './styles';
 import VideoCard from './components/VideoCard';
 import Slider, { SliderItem } from './components/Slider';
 
@@ -10,6 +10,7 @@ function Carousel({
 }) {
   const categoryTitle = category.titulo;
   const categoryColor = category.cor;
+  const categoryDescription = category.descricao;
   const { videos } = category;
   return (
     <VideoCardGroupContainer>
@@ -18,6 +19,9 @@ function Carousel({
           <Title style={{ backgroundColor: categoryColor }}>
             {categoryTitle}
           </Title>
+          <Descritpion>
+            {categoryDescription}
+          </Descritpion>
         </>
       )}
       <Slider>
@@ -43,13 +47,18 @@ function Carousel({
 
 Carousel.defaultProps = {
   ignoreFirstVideo: false,
+  category: {
+    cor: '#ED0000',
+    descricao: '',
+  },
 };
 
 Carousel.propTypes = {
   category: PropTypes.shape({
     titulo: PropTypes.string.isRequired,
-    cor: PropTypes.string.isRequired,
-  }).isRequired,
+    cor: PropTypes.string,
+    descricao: PropTypes.string,
+  }),
   ignoreFirstVideo: PropTypes.bool,
 };
 
