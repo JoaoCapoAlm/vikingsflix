@@ -30,7 +30,6 @@ PageDefault.defaultProps = {
 };
 
 PageDefault.propTypes = {
-  children: PropTypes.element.isRequired,
   paddingAll: PropTypes.string,
 };
 

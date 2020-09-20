@@ -7,21 +7,29 @@ import useForm from '../../../hooks/useForm';
 import categoryRepository from '../../../repositories/categorias';
 
 function CadastroCategoria() {
-  const { handleChange, values, clearForm } = useForm({});
+  const { handleChange, values, clearForm } = useForm();
   const [categorias, setCategorias] = useState([]);
 
   useEffect(() => {
     fetch(`${urlBackEnd}/categorias`)
       .then(async (respostaDoServidor) => {
+        document.getElementById('erroServer').innerHTML = null;
+
         const resposta = await respostaDoServidor.json();
         setCategorias([
           ...resposta,
         ]);
+      })
+      .catch(() => {
+        const span = document.getElementById('erroServer');
+        span.innerHTML = '<h1>Erro no servidor</h1>';
+        span.innerHTML += '<p>Por favor entrar em contato com jpcapoani98@gmail.com</p>';
       });
   }, []);
 
   return (
     <PageDefault>
+      <span id="erroServer" />
       <h1>
         Cadastro de Categoria:
         {' '}
@@ -34,14 +42,19 @@ function CadastroCategoria() {
           ...categorias,
           values,
         ]);
+        if (values.titulo === undefined || values.cor === undefined) {
+          alert('Campo vázio! Pelo menos o título e a cor precisam estar preenchidos.');
+        }
 
         categoryRepository.create({
           titulo: values.titulo,
           descricao: values.descricao,
           cor: values.cor,
+        }).then(() => {
+          clearForm();
+          // eslint-disable-next-line no-alert
+          alert('Cadastrado com sucesso');
         });
-
-        clearForm();
       }}
       >
 
@@ -64,14 +77,12 @@ function CadastroCategoria() {
           label="Cor"
           type="color"
           name="cor"
-          value={values.cor}
+          value="#000000"
           onChange={handleChange}
         />
-        <div className="ajustePosicaoBtn">
-          <Button type="submit">
-            Cadastrar
-          </Button>
-        </div>
+        <Button type="submit" className="ajustePosicaoBtn">
+          Cadastrar
+        </Button>
       </form>
 
       {categorias.length === 0 && (

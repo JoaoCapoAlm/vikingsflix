@@ -11,9 +11,10 @@ function Home() {
       .then((categoriasComVideo) => {
         setDadosInicias(categoriasComVideo);
       })
-      .catch((e) => {
-        // eslint-disable-next-line no-alert
-        alert(e.message);
+      .catch(() => {
+        const span = document.getElementById('spanLoading');
+        span.innerHTML = '<h1>Erro no servidor</h1>';
+        span.innerHTML += '<p>Por favor entrar em contato com jpcapoani98@gmail.com</p>';
       });
   }, []);
 
@@ -21,7 +22,7 @@ function Home() {
     <PageDefault paddingAll="0">
       <>
         {dadosIniciais.length === 0 && (
-          <span className="spanLoading">
+          <span className="spanLoading" id="spanLoading">
             Loading...
           </span>
         )}

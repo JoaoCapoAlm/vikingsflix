@@ -8,7 +8,7 @@ import createVideo from '../../../repositories/videos';
 import categoriasRepository from '../../../repositories/categorias';
 
 function CadastroVideo() {
-  const { handleChange, values } = useForm({ });
+  const { handleChange, values, clearForm } = useForm();
   const [categories, setCategories] = useState([]);
   const categoryTitles = categories.map(({ titulo }) => titulo);
 
@@ -33,9 +33,12 @@ function CadastroVideo() {
             return category.titulo === values.categoria;
           });
 
-          if (values.titulo === undefined || values.url === undefined || categoriaEscolhida.id === undefined) {
+          if (values.titulo === undefined
+              || values.url === undefined
+              || categoriaEscolhida.id === undefined
+          ) {
             // eslint-disable-next-line no-alert
-            alert('Não cadastrado! Campo em branco');
+            alert('Não cadastrado! Campo em branco.');
             return;
           }
           createVideo({
@@ -44,7 +47,8 @@ function CadastroVideo() {
             categoriaId: categoriaEscolhida.id,
           }).then(() => {
             // eslint-disable-next-line no-alert
-            alert('Cadastrado com sucesso');
+            alert('Cadastrado com sucesso.');
+            clearForm();
           });
         }}
         >
