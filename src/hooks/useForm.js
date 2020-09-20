@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-function useForm(valoresIniciais) {
-  const [values, setValues] = useState(valoresIniciais);
+function useForm() {
+  const [values, setValues] = useState('');
 
   function setValue(chave, valor) {
     setValues({
@@ -18,7 +18,7 @@ function useForm(valoresIniciais) {
   }
 
   function clearForm() {
-    setValues(valoresIniciais);
+    setValues('');
   }
 
   return {
