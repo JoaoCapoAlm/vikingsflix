@@ -13,8 +13,7 @@ function Home() {
       })
       .catch(() => {
         const span = document.getElementById('spanLoading');
-        span.innerHTML = '<h1>Erro no servidor</h1>';
-        span.innerHTML += '<p>Por favor entrar em contato com jpcapoani98@gmail.com</p>';
+        span.innerHTML = '<h1>Erro inesperado!</h1>';
       });
   }, []);
 

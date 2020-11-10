@@ -22,8 +22,7 @@ function CadastroCategoria() {
       })
       .catch(() => {
         const span = document.getElementById('erroServer');
-        span.innerHTML = '<h1>Erro no servidor</h1>';
-        span.innerHTML += '<p>Por favor entrar em contato com jpcapoani98@gmail.com</p>';
+        span.innerHTML = '<h1>Erro inesperado!</h1>';
       });
   }, []);
 
@@ -43,6 +42,7 @@ function CadastroCategoria() {
           values,
         ]);
         if (values.titulo === undefined || values.cor === undefined) {
+          // eslint-disable-next-line no-alert
           alert('Campo vázio! Pelo menos o título e a cor precisam estar preenchidos.');
         }
 

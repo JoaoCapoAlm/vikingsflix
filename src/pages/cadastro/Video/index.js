@@ -17,12 +17,16 @@ function CadastroVideo() {
       .getAll()
       .then((categoryFromServer) => {
         setCategories(categoryFromServer);
+      }).catch(() => {
+        const span = document.getElementById('erroServer');
+        span.innerHTML = '<h1>Erro inesperado!</h1>';
       });
   }, []);
 
   return (
     <PageDefault>
       <>
+        <span id="erroServer" />
         <h1>Cadastro de Video</h1>
 
         <form onSubmit={(event) => {
@@ -49,9 +53,13 @@ function CadastroVideo() {
             // eslint-disable-next-line no-alert
             alert('Cadastrado com sucesso.');
             clearForm();
+          }).catch(() => {
+            const erroForm = document.getElementById('erroForm');
+            erroForm.innerHTML = '<h1>Erro inesperado!</h1>';
           });
         }}
         >
+          <span id="erroForm" />
           <FormField
             label="Título do Vídeo"
             name="titulo"
