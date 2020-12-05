@@ -11,9 +11,11 @@ function Home() {
       .then((categoriasComVideo) => {
         setDadosInicias(categoriasComVideo);
       })
-      .catch(() => {
+      .catch((error) => {
         const span = document.getElementById('spanLoading');
         span.innerHTML = '<h1>Erro inesperado!</h1>';
+        // eslint-disable-next-line no-console
+        console.log(error);
       });
   }, []);
 

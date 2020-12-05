@@ -90,14 +90,21 @@ function CadastroCategoria() {
           Loading...
         </span>
       )}
-      <h4>Categorias já cadastradas</h4>
-      <ul>
+      {categorias.length > 0 && (
+        <h4>Categorias já cadastradas</h4>
+      )}
+      <table>
+        <tr>
+          <th>Título</th>
+          <th>Cor</th>
+        </tr>
         {categorias.map((category) => (
-          <li key={category.id} className="listCadCategory">
-            {category.titulo}
-          </li>
+          <tr key={category.id}>
+            <td>{category.titulo}</td>
+            <td>{category.cor}</td>
+          </tr>
         ))}
-      </ul>
+      </table>
     </PageDefault>
   );
 }
