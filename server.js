@@ -8,4 +8,7 @@ const port = process.env.PORT || 8080;
 
 server.use(middlewares);
 server.use(router);
-server.listen(port);
+server.listen(port, () => {
+  // eslint-disable-next-line no-console
+  console.log(`--> Server online on port: ${port} <--`);
+});
