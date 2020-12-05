@@ -72,7 +72,7 @@ function CadastroCategoria() {
           value={values.descricao}
           onChange={handleChange}
         />
-
+        {/* FIXME: nao esta dando para escolher a cord */}
         <FormField
           label="Cor"
           type="color"
@@ -93,6 +93,7 @@ function CadastroCategoria() {
       {categorias.length > 0 && (
         <h4>Categorias já cadastradas</h4>
       )}
+      {/* TODO: estilização tabela */}
       <table>
         <tr>
           <th>Título</th>
