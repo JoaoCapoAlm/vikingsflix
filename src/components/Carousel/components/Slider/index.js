@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import SlickSlider from 'react-slick';
 import styled from 'styled-components';
 
@@ -19,7 +18,7 @@ const Container = styled.ul`
       font-size: 30px;
     }
   }
-  
+
   .slick-prev {
     left: 0;
   }
@@ -53,9 +52,5 @@ const Slider = ({ children }) => (
     </SlickSlider>
   </Container>
 );
-
-SliderItem.propTypes = {
-  children: PropTypes.element.isRequired,
-};
 
 export default Slider;

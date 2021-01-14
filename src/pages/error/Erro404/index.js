@@ -7,7 +7,6 @@ function Error404() {
   return (
     <PageDefault>
       <div className="error">
-
         <h1>Erro 404</h1>
         <h2>Página não encontrada</h2>
 

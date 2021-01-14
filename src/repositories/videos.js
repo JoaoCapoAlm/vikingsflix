@@ -2,7 +2,7 @@ import urlBackEnd from '../config';
 
 const urlVideos = `${urlBackEnd}/videos`;
 
-function create(object) {
+export default function create(object) {
   return fetch(`${urlVideos}?_embed=videos`, {
     method: 'POST',
     headers: {
@@ -19,5 +19,3 @@ function create(object) {
       throw new Error('Não foi possível cadastrar os dados');
     });
 }
-
-export default create;

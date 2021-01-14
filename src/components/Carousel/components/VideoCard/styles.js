@@ -23,7 +23,7 @@ const VideoCardContainer = styled.a`
   &:focus {
     opacity: .5;
   }
-  
+
   &:not(:first-child) {
     margin-left: 20px;
   }

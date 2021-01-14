@@ -43,8 +43,4 @@ function create(object) {
     });
 }
 
-export default {
-  getAllWithVideos,
-  getAll,
-  create,
-};
+export default { getAllWithVideos, getAll, create };

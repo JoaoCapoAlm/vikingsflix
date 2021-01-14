@@ -4,7 +4,7 @@ import Carousel from '../../components/Carousel';
 import PageDefault from '../../components/PageDefault';
 import categoriasRepository from '../../repositories/categorias';
 
-function Home() {
+export default function Home() {
   const [dadosIniciais, setDadosInicias] = useState([]);
   useEffect(() => {
     categoriasRepository.getAllWithVideos()
@@ -53,5 +53,3 @@ function Home() {
     </PageDefault>
   );
 }
-
-export default Home;

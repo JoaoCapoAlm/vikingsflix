@@ -7,7 +7,7 @@ import useForm from '../../../hooks/useForm';
 import createVideo from '../../../repositories/videos';
 import categoriasRepository from '../../../repositories/categorias';
 
-function CadastroVideo() {
+export default function CadastroVideo() {
   const { handleChange, values, clearForm } = useForm();
   const [categories, setCategories] = useState([]);
   const categoryTitles = categories.map(({ titulo }) => titulo);
@@ -95,5 +95,3 @@ function CadastroVideo() {
     </PageDefault>
   );
 }
-
-export default CadastroVideo;
