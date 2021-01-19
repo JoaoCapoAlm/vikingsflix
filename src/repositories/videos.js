@@ -2,7 +2,7 @@ import urlBackEnd from '../config';
 
 const urlVideos = `${urlBackEnd}/videos`;
 
-function create(object) {
+export default function create(object) {
   return fetch(`${urlVideos}?_embed=videos`, {
     method: 'POST',
     headers: {
@@ -23,5 +23,3 @@ function create(object) {
       console.log(error);
     });
 }
-
-export default create;

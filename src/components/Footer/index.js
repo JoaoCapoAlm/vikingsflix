@@ -17,18 +17,31 @@ function Footer() {
   return (
     <FooterStyle>
       <a href="https://www.alura.com.br/">
-        <img src="https://www.alura.com.br/assets/img/alura-logo-white.1570550707.svg" alt="Logo Alura" />
+        <img
+          src="https://www.alura.com.br/assets/img/alura-logo-white.1570550707.svg"
+          alt="Logo Alura"
+        />
       </a>
       <p>
         Criado por
         {' '}
-        <a href="https://www.linkedin.com/in/joao-capoani/" target="_blank" rel="noopener noreferrer" title="Conta do LinkedIn">
+        <a
+          href="https://www.linkedin.com/in/joao-capoani/"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Conta do LinkedIn"
+        >
           João Pedro
         </a>
         {' '}
         durante a
         {' '}
-        <a href="https://www.alura.com.br/" target="_blank" rel="noopener noreferrer" title="Site da Alura">
+        <a
+          href="https://www.alura.com.br/"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="Site da Alura"
+        >
           Imersão React da Alura
         </a>
       </p>

@@ -39,7 +39,12 @@ function Menu() {
         <Logo />
       </Link>
 
-      <Button as={Link} className="ButtonLink" to="/cadastro/video" cor="--color-logo">
+      <Button
+        as={Link}
+        className="ButtonLink"
+        to="/cadastro/video"
+        cor="--color-logo"
+      >
         Novo vídeo
       </Button>
     </MenuStyle>

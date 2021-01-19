@@ -13,7 +13,7 @@ const Main = styled.main`
   `}
 `;
 
-function PageDefault({ children, paddingAll }) {
+export default function PageDefault({ children, paddingAll }) {
   return (
     <>
       <Menu />
@@ -31,6 +31,5 @@ PageDefault.defaultProps = {
 
 PageDefault.propTypes = {
   paddingAll: PropTypes.string,
+  children: PropTypes.element.isRequired,
 };
-
-export default PageDefault;

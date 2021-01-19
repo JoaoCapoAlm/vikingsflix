@@ -43,7 +43,9 @@ function CadastroCategoria() {
         ]);
         if (values.titulo === undefined || values.cor === undefined) {
           // eslint-disable-next-line no-alert
-          alert('Campo vázio! Pelo menos o título e a cor precisam estar preenchidos.');
+          alert(
+            'Campo vázio! Pelo menos o título e a cor precisam estar preenchidos.',
+          );
         }
 
         categoryRepository.create({
