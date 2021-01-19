@@ -74,7 +74,7 @@ function CadastroCategoria() {
           value={values.descricao}
           onChange={handleChange}
         />
-
+        {/* FIXME: nao esta dando para escolher a cord */}
         <FormField
           label="Cor"
           type="color"
@@ -92,14 +92,22 @@ function CadastroCategoria() {
           Loading...
         </span>
       )}
-      <h4>Categorias já cadastradas</h4>
-      <ul>
+      {categorias.length > 0 && (
+        <h4>Categorias já cadastradas</h4>
+      )}
+      {/* TODO: estilização tabela */}
+      <table>
+        <tr>
+          <th>Título</th>
+          <th>Cor</th>
+        </tr>
         {categorias.map((category) => (
-          <li key={category.id} className="listCadCategory">
-            {category.titulo}
-          </li>
+          <tr key={category.id}>
+            <td>{category.titulo}</td>
+            <td>{category.cor}</td>
+          </tr>
         ))}
-      </ul>
+      </table>
     </PageDefault>
   );
 }

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import PageDefault from '../../../components/PageDefault';
-import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
+import FormField from '../../../components/FormField';
+import PageDefault from '../../../components/PageDefault';
 import useForm from '../../../hooks/useForm';
-import createVideo from '../../../repositories/videos';
 import categoriasRepository from '../../../repositories/categorias';
+import createVideo from '../../../repositories/videos';
 
 export default function CadastroVideo() {
   const { handleChange, values, clearForm } = useForm();
@@ -32,10 +32,9 @@ export default function CadastroVideo() {
         <form onSubmit={(event) => {
           event.preventDefault();
 
-          // eslint-disable-next-line arrow-body-style
-          const categoriaEscolhida = categories.find((category) => {
-            return category.titulo === values.categoria;
-          });
+          const categoriaEscolhida = categories.find(
+            (category) => category.titulo === values.categoria,
+          );
 
           if (values.titulo === undefined
               || values.url === undefined

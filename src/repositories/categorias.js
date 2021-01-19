@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 import urlBackEnd from '../config';
 
 const urlCategories = `${urlBackEnd}/categorias?_embed=videos`;
@@ -11,6 +12,9 @@ function getAll() {
       }
 
       throw new Error('Não possível pegar os dados!');
+    }).catch((error) => {
+      console.log(error);
+      return false;
     });
 }
 
@@ -23,6 +27,10 @@ function getAllWithVideos() {
       }
 
       throw new Error('Não foi possível pegar os dados');
+    })
+    .catch((ex) => {
+      console.log(ex);
+      return false;
     });
 }
 
@@ -40,6 +48,9 @@ function create(object) {
         return answer;
       }
       throw new Error('Não foi possível cadastrar os dados');
+    }).catch((error) => {
+      console.log(error);
+      return false;
     });
 }
 

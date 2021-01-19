@@ -50,7 +50,7 @@ function BannerMain({
 }
 
 BannerMain.defaultProps = {
-  videoDescription: null,
+  videoDescription: '',
 };
 
 BannerMain.propTypes = {

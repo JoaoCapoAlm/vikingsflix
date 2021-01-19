@@ -17,5 +17,9 @@ export default function create(object) {
       }
 
       throw new Error('Não foi possível cadastrar os dados');
+    })
+    .catch((error) => {
+      // eslint-disable-next-line no-console
+      console.log(error);
     });
 }
