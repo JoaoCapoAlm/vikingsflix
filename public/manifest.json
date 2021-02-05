@@ -15,5 +15,6 @@
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#000000"
+  "background_color": "#000000",
+  "description": "Projeto criado durante a Imersão React (Alura Cursos) por João Almeida em 2020."
 }
