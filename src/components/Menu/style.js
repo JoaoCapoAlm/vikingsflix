@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const MenuStyle = styled.nav`
+const Container = styled.nav`
   width: 100%;
   height: 94px;
   z-index: 100;
@@ -22,7 +22,8 @@ const MenuStyle = styled.nav`
   @media (max-width: 800px){
     height: 40px;
     justify-content: center;
+    padding-right: 0;
   }
 `;
 
-export default MenuStyle;
+export default Container;

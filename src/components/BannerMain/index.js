@@ -7,7 +7,7 @@ import {
   WatchButton,
 } from './styles';
 
-export default function getYouTubeId(youtubeURL) {
+function getYouTubeId(youtubeURL) {
   return youtubeURL
     .replace(
       /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/,
@@ -15,7 +15,7 @@ export default function getYouTubeId(youtubeURL) {
     );
 }
 
-function BannerMain({
+export default function BannerMain({
   videoTitle,
   videoDescription,
   url,

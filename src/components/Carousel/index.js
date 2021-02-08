@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes, { string } from 'prop-types';
+import PropTypes from 'prop-types';
 import { VideoCardGroupContainer, Title, Descritpion } from './styles';
 import VideoCard from './components/VideoCard';
 import Slider, { SliderItem } from './components/Slider';
@@ -58,6 +58,10 @@ Carousel.propTypes = {
     titulo: PropTypes.string.isRequired,
     cor: PropTypes.string,
     descricao: PropTypes.string,
+    videos: PropTypes.arrayOf({
+      titulo: PropTypes.string,
+      url: PropTypes.string,
+    }),
   }),
   ignoreFirstVideo: PropTypes.bool,
 };
